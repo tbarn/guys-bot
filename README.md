@@ -24,3 +24,5 @@ To get your own Glitch-hosted Guys Bot up-and-running, start by clicking the "Re
     - `NODE_ENV=` should be set to `production`. 
 
 4. Wait for app to load. A green `Live` label should show up next to the **Show** button when it's finished loading.
+
+**The docs are a work in progress. If you get stuck, please open an issue and I'll try to help you.**
