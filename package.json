@@ -1,0 +1,29 @@
+{
+  "name": "guys-bot",
+  "version": "1.0.0",
+  "description": "making language on GitHub more inclusive one bot at a time",
+  "author": "tbarn",
+  "license": "MIT",
+  "repository": "guys-bot",
+  "scripts": {
+    "start": "probot run ./index.js",
+    "test": "mocha && standard"
+  },
+  "dependencies": {
+    "probot": "^3.0.2"
+  },
+  "devDependencies": {
+    "expect": "^1.20.2",
+    "mocha": "^4.0.1",
+    "standard": "^10.0.3"
+  },
+  "standard": {
+    "env": [
+      "mocha"
+    ]
+  },
+  "engines": {
+    "node": "7.7.1",
+    "npm": "4.0.0"
+  }
+}
