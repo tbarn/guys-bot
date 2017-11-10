@@ -15,9 +15,9 @@ To get your own Glitch-hosted Guys Bot up-and-running, start by clicking the "Re
     - Choose the permissions you want to give your bot based on what you want to build (ex. issues bot, PR bot, hybrid).
     - Save your changes.
 
-2. You will need to download your private key near the end of the page. In order to use Glitch's environmental variables feature, we will need to make the private key into a single line. 
+2. You will need to download your private key near the end of the page. In order to use Glitch's environmental variables feature, we will need to make the private key into a single line, including a trailing `\n` character. 
     - Here's an example, the actual key will be longer: 
-`'-----BEGIN RSA PRIVATE KEY-----\ndfkls83jrfsdf\nndfkls83jrfsdf\ndfkls83jrfsdf\n-----END RSA PRIVATE KEY-----\n'`
+`-----BEGIN RSA PRIVATE KEY-----\ndfkls83jrfsdf\nndfkls83jrfsdf\ndfkls83jrfsdf\n-----END RSA PRIVATE KEY-----\n`
     - If you are using Mac or Linux (`gawk` on some distributions), you can do this in your command line in the folder where your private key file is saved by running the command: `awk '{printf "%s\\n", $0}' private_key_file_name.pem` and it will look similar to the example.
     - You can also do the same thing in the text editor of your choice if you like doing regex stuff there.  
     - Keep this single line private key handy until Step 3. 
@@ -25,7 +25,7 @@ To get your own Glitch-hosted Guys Bot up-and-running, start by clicking the "Re
 3. Now, go to your Glitch project and edit the `.env` file (at left) with your app credentials. 
     - `APP_ID` can be found in the About section of your Github app.
     - `WEBHOOK_SECRET` is the value you generated in Step 1.
-    - `PRIVATE_KEY` should be set to your single line private key from Step 2.
+    - `PRIVATE_KEY` should be set to your single line private key from Step 2. **Remember** to put quotation marks `'` around the key, otherwise, it won't work.
     - `NODE_ENV=` should be set to `production`. 
 
 4. Wait for app to load. A green `Live` label should show up next to the **Show** button when it's finished loading.
