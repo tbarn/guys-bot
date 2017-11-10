@@ -20,7 +20,7 @@ To get your own Glitch-hosted Guys Bot up-and-running, start by clicking the "Re
 3. Now, go to your Glitch project and edit the `.env` file (at left) with your app credentials. 
     - `APP_ID` can be found in the About section of your Github app.
     - `WEBHOOK_SECRET` is the value you generated in Step 2.
-    - `PRIVATE_KEY` should be set to your downloaded private key. The `PRIVATE_KEY` will need to have `\n` for new lines, including a trailing `\n`. Here's an example, the actual key will be longer: `'-----BEGIN RSA PRIVATE KEY-----\ndfkls83jrfsdf\nndfkls83jrfsdf\ndfkls83jrfsdf\n-----END RSA PRIVATE KEY-----\n'`
+    - `PRIVATE_KEY` should be set to your downloaded private key. The `PRIVATE_KEY` will need to have `\n` for new lines, including a trailing `\n`. Here's an example, the actual key will be longer: `'-----BEGIN RSA PRIVATE KEY-----\ndfkls83jrfsdf\nndfkls83jrfsdf\ndfkls83jrfsdf\n-----END RSA PRIVATE KEY-----\n'` If you are running on Mac or Linux, you can get this in your Terminal by using the commamnd: `awk '{printf "%s\\n", $0}' private_key_file_name.pem`.
     - `NODE_ENV=` should be set to `production`. 
 
 4. Wait for app to load. A green `Live` label should show up next to the **Show** button when it's finished loading.
