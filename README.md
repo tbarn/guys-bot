@@ -1,4 +1,4 @@
-# Guys Bot
+# Guys Bot [![Build Status](https://travis-ci.org/tbarn/guys-bot.svg?branch=master)](https://travis-ci.org/tbarn/guys-bot)
 Making language on GitHub more inclusive one bot at a time 🤖 
 
 ![Image of example behavior](example.png)
