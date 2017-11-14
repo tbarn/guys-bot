@@ -1,0 +1,29 @@
+{
+    "event": "pull_request",
+    "payload": {
+        "action": "opened",
+        "pull_request": {
+            "number": 21,
+            "user": {
+                "login": "tbarn",
+                "type": "User"
+            },
+            "title": "This is a pr",
+            "body": "Hey guys, can you review this?"
+        },
+        "repository": {
+            "name": "testing-things",
+            "owner": {
+                "login": "tbarn"
+            }
+        },
+        "sender": {
+            "login": "tbarn",
+            "id": 2008034,
+            "type": "User"
+          },        
+        "installation": {
+            "id": 0
+        }
+    }
+}

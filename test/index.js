@@ -1,7 +1,9 @@
 const expect = require('expect')
 const {createRobot} = require('probot')
 const plugin = require('..')
-const payload = require('./events/payload')
+
+const prGuysPayload = require('./events/pr_guys')
+const issueGuysPayload = require('./events/issue_guys')
 
 describe('guys-bot', () => {
   let robot
@@ -22,9 +24,17 @@ describe('guys-bot', () => {
     robot.auth = () => Promise.resolve(github)
   })
 
-  describe('bot message success', function () {
+  describe('Pull requests', function () {
     it('posts a comment because user used guys', async function () {
-      await robot.receive(payload)
+      await robot.receive(prGuysPayload)
+
+      expect(github.issues.createComment).toHaveBeenCalled()
+    })
+  })
+
+  describe('Issues', function () {
+    it('posts a comment because user used guys', async function () {
+      await robot.receive(issueGuysPayload)
 
       expect(github.issues.createComment).toHaveBeenCalled()
     })
